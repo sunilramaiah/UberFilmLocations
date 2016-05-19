@@ -47,7 +47,6 @@ function refreshMap() {
 		url : 'http://ec2-52-27-43-77.us-west-2.compute.amazonaws.com:8080/UberFilmLocations/ufl/search/filmName?filmName=' + $("#autocomplete").val(),
 	}).done(function(result) {
 		
-		alert(result);
 		if (result.success) {
 			var locations = result.data.data;
 			
