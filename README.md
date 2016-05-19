@@ -20,6 +20,8 @@ For backend, I am most comfortable with Java and I have been developing REST ser
 
 Tradeoffs
 
+I would be writing JUnit tests and functional tests.
+
 I have used JestClient to index and query ES. In a production system, I would not use it, but instead make it a worker node that joins the ES cluster, so that it will scale and performs best. JestClient does not scale well, but easier to setup.
 
 I would also massage the data back to the client, by removing the unwanted data in the payload, so that the data transfer will be much faster b/w client and server. I am right now transferring all the data related to the film location back to the client.
@@ -27,7 +29,6 @@ I would also massage the data back to the client, by removing the unwanted data 
 For UI, I would use AngularJS or ReactJS and do better error handling in the UI. I have barebones of the UI app, but completely functional.
 
 I would also be using Apache common configs to store all the API keys, server hostname / port, ES index names, schema names etc. and I would not be hardcoding these in the code normally.
-
 
 # APIs
 
