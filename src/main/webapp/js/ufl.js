@@ -7,7 +7,7 @@ $(function() {
                 delay: 200,
                 minLength: 0,
                 source: function(request, response) {
-                        $.getJSON("http://localhost:8080/UberFilmLocations/ufl/search/filmName/autocomplete", {
+                        $.getJSON("http://ec2-52-27-43-77.us-west-2.compute.amazonaws.com:8080/UberFilmLocations/ufl/search/filmName/autocomplete", {
                                 filmName: $("#autocomplete").val()
                         }, function(result) {
                                 if (result.success) {
@@ -44,7 +44,7 @@ function clearMap() {
 
 function refreshMap() {
 	$.ajax({
-		url : 'http://localhost:8080/UberFilmLocations/ufl/search/filmName?filmName=' + $("#autocomplete").val(),
+		url : 'http://ec2-52-27-43-77.us-west-2.compute.amazonaws.com:8080/UberFilmLocations/ufl/search/filmName?filmName=' + $("#autocomplete").val(),
 	}).done(function(result) {
 		
 		alert(result);
@@ -71,7 +71,7 @@ function refreshMap() {
 		
 	}).fail(function() {
 		
-		alert("Ajax failed to fetch data")
+		alert("Unable to fetch data. Please try again after some time.");
 		
 	})
 }
