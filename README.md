@@ -55,6 +55,9 @@ handled by
 
 FilmLocationsSearchController
 
+# Demo
+
+http://ec2-52-27-43-77.us-west-2.compute.amazonaws.com:8080/UberFilmLocations/
 
 
 
